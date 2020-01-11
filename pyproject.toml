@@ -11,7 +11,6 @@ jupyter = "^1.0"
 pandas = "^0.25.3"
 vega_datasets = "^0.8.0"
 pytest = "^5.3"
-pyarrow = "^0.15.1"
 
 [tool.poetry.dev-dependencies]
 
