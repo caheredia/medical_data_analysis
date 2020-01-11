@@ -1,4 +1,4 @@
-from helpers import RAW_DATA, TRANSFORMED_DATA, find_files
+from helpers import RAW_DATA, PROCESSED_DATA, find_files
 
 
 def test_find_csv_files():
