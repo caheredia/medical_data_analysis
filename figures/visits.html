@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.0.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-dfa2eaacb4b1e1e3e6c9f88cd405679b"}, "mark": "bar", "encoding": {"color": {"type": "nominal", "field": "ClinicID"}, "tooltip": [{"type": "nominal", "field": "ClinicID"}, {"type": "quantitative", "aggregate": "sum", "field": "VisitsCNT"}], "x": {"type": "quantitative", "aggregate": "sum", "field": "VisitsCNT"}, "y": {"type": "nominal", "field": "ModalityDSC", "sort": "-x"}}, "height": 500, "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json", "datasets": {"data-dfa2eaacb4b1e1e3e6c9f88cd405679b": [{"ModalityDSC": "Acupuncture", "ClinicID": "A", "VisitsCNT": 411.0}, {"ModalityDSC": "Acupuncture", "ClinicID": "B", "VisitsCNT": 421.0}, {"ModalityDSC": "Acupuncture", "ClinicID": "C", "VisitsCNT": 408.0}, {"ModalityDSC": "Bod Pod", "ClinicID": "A", "VisitsCNT": 50.0}, {"ModalityDSC": "Bod Pod", "ClinicID": "B", "VisitsCNT": null}, {"ModalityDSC": "Bod Pod", "ClinicID": "C", "VisitsCNT": 15.0}, {"ModalityDSC": "Chiropractic", "ClinicID": "A", "VisitsCNT": 1221.0}, {"ModalityDSC": "Chiropractic", "ClinicID": "B", "VisitsCNT": 845.0}, {"ModalityDSC": "Chiropractic", "ClinicID": "C", "VisitsCNT": 904.0}, {"ModalityDSC": "Dental", "ClinicID": "A", "VisitsCNT": 508.0}, {"ModalityDSC": "Dental", "ClinicID": "B", "VisitsCNT": null}, {"ModalityDSC": "Dental", "ClinicID": "C", "VisitsCNT": 382.0}, {"ModalityDSC": "Dermatology", "ClinicID": "A", "VisitsCNT": 172.0}, {"ModalityDSC": "Dermatology", "ClinicID": "B", "VisitsCNT": 97.0}, {"ModalityDSC": "Dermatology", "ClinicID": "C", "VisitsCNT": 78.0}, {"ModalityDSC": "Health Coach", "ClinicID": "A", "VisitsCNT": 131.0}, {"ModalityDSC": "Health Coach", "ClinicID": "B", "VisitsCNT": 129.0}, {"ModalityDSC": "Health Coach", "ClinicID": "C", "VisitsCNT": 234.0}, {"ModalityDSC": "Lab Visit", "ClinicID": "A", "VisitsCNT": 153.0}, {"ModalityDSC": "Lab Visit", "ClinicID": "B", "VisitsCNT": 24.0}, {"ModalityDSC": "Lab Visit", "ClinicID": "C", "VisitsCNT": 147.0}, {"ModalityDSC": "Massage", "ClinicID": "A", "VisitsCNT": 360.0}, {"ModalityDSC": "Massage", "ClinicID": "B", "VisitsCNT": 195.0}, {"ModalityDSC": "Massage", "ClinicID": "C", "VisitsCNT": 231.0}, {"ModalityDSC": "Mental Health", "ClinicID": "A", "VisitsCNT": 130.0}, {"ModalityDSC": "Mental Health", "ClinicID": "B", "VisitsCNT": 686.0}, {"ModalityDSC": "Mental Health", "ClinicID": "C", "VisitsCNT": 293.0}, {"ModalityDSC": "Nurse Practitioner", "ClinicID": "A", "VisitsCNT": null}, {"ModalityDSC": "Nurse Practitioner", "ClinicID": "B", "VisitsCNT": 71.0}, {"ModalityDSC": "Nurse Practitioner", "ClinicID": "C", "VisitsCNT": 296.0}, {"ModalityDSC": "Nurse Visit", "ClinicID": "A", "VisitsCNT": 316.0}, {"ModalityDSC": "Nurse Visit", "ClinicID": "B", "VisitsCNT": 120.0}, {"ModalityDSC": "Nurse Visit", "ClinicID": "C", "VisitsCNT": 534.0}, {"ModalityDSC": "Optometry", "ClinicID": "A", "VisitsCNT": 360.0}, {"ModalityDSC": "Optometry", "ClinicID": "B", "VisitsCNT": 284.0}, {"ModalityDSC": "Optometry", "ClinicID": "C", "VisitsCNT": 201.0}, {"ModalityDSC": "Physical Therapy", "ClinicID": "A", "VisitsCNT": 952.0}, {"ModalityDSC": "Physical Therapy", "ClinicID": "B", "VisitsCNT": 549.0}, {"ModalityDSC": "Physical Therapy", "ClinicID": "C", "VisitsCNT": 965.0}, {"ModalityDSC": "Preventive", "ClinicID": "A", "VisitsCNT": 415.0}, {"ModalityDSC": "Preventive", "ClinicID": "B", "VisitsCNT": 391.0}, {"ModalityDSC": "Preventive", "ClinicID": "C", "VisitsCNT": 472.0}, {"ModalityDSC": "Primary", "ClinicID": "A", "VisitsCNT": 1067.0}, {"ModalityDSC": "Primary", "ClinicID": "B", "VisitsCNT": 876.0}, {"ModalityDSC": "Primary", "ClinicID": "C", "VisitsCNT": 968.0}, {"ModalityDSC": "Psychiatry", "ClinicID": "A", "VisitsCNT": null}, {"ModalityDSC": "Psychiatry", "ClinicID": "B", "VisitsCNT": 37.0}, {"ModalityDSC": "Psychiatry", "ClinicID": "C", "VisitsCNT": 4.0}, {"ModalityDSC": "Screening", "ClinicID": "A", "VisitsCNT": null}, {"ModalityDSC": "Screening", "ClinicID": "B", "VisitsCNT": 97.0}, {"ModalityDSC": "Screening", "ClinicID": "C", "VisitsCNT": 67.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
