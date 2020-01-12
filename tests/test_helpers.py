@@ -15,7 +15,9 @@ def test_directories():
 
 def test_make_notebook():
     subprocess.run(["make", "notebook"])
-    figures = find_files(FIGURES, '.html')
+
+    figures = find_files(FIGURES, ".html")
     assert figures
-    processed_files = find_files(PROCESSED_DATA, '.gzip')
+
+    processed_files = find_files(PROCESSED_DATA, ".gzip")
     assert processed_files
