@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.0.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-2d7f352eb2bc75e256e5d002c421e104"}, "mark": "bar", "encoding": {"color": {"type": "nominal", "field": "RelationshipDSC"}, "tooltip": [{"type": "nominal", "field": "RelationshipDSC"}, {"type": "quantitative", "aggregate": "sum", "field": "VisitsCNT"}], "x": {"type": "quantitative", "aggregate": "sum", "field": "VisitsCNT"}, "y": {"type": "nominal", "field": "ModalityDSC", "sort": "-x"}}, "height": 500, "title": "Employee visits by modality", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json", "datasets": {"data-2d7f352eb2bc75e256e5d002c421e104": [{"ModalityDSC": "Acupuncture", "RelationshipDSC": "Dependent", "VisitsCNT": 327}, {"ModalityDSC": "Acupuncture", "RelationshipDSC": "Employee", "VisitsCNT": 913}, {"ModalityDSC": "Bod Pod", "RelationshipDSC": "Dependent", "VisitsCNT": 17}, {"ModalityDSC": "Bod Pod", "RelationshipDSC": "Employee", "VisitsCNT": 48}, {"ModalityDSC": "Chiropractic", "RelationshipDSC": "Dependent", "VisitsCNT": 748}, {"ModalityDSC": "Chiropractic", "RelationshipDSC": "Employee", "VisitsCNT": 2222}, {"ModalityDSC": "Dental", "RelationshipDSC": "Dependent", "VisitsCNT": 289}, {"ModalityDSC": "Dental", "RelationshipDSC": "Employee", "VisitsCNT": 601}, {"ModalityDSC": "Dermatology", "RelationshipDSC": "Dependent", "VisitsCNT": 100}, {"ModalityDSC": "Dermatology", "RelationshipDSC": "Employee", "VisitsCNT": 247}, {"ModalityDSC": "Health Coach", "RelationshipDSC": "Dependent", "VisitsCNT": 155}, {"ModalityDSC": "Health Coach", "RelationshipDSC": "Employee", "VisitsCNT": 339}, {"ModalityDSC": "Lab Visit", "RelationshipDSC": "Dependent", "VisitsCNT": 100}, {"ModalityDSC": "Lab Visit", "RelationshipDSC": "Employee", "VisitsCNT": 224}, {"ModalityDSC": "Massage", "RelationshipDSC": "Dependent", "VisitsCNT": 216}, {"ModalityDSC": "Massage", "RelationshipDSC": "Employee", "VisitsCNT": 570}, {"ModalityDSC": "Mental Health", "RelationshipDSC": "Dependent", "VisitsCNT": 311}, {"ModalityDSC": "Mental Health", "RelationshipDSC": "Employee", "VisitsCNT": 798}, {"ModalityDSC": "Nurse Practitioner", "RelationshipDSC": "Dependent", "VisitsCNT": 119}, {"ModalityDSC": "Nurse Practitioner", "RelationshipDSC": "Employee", "VisitsCNT": 248}, {"ModalityDSC": "Nurse Visit", "RelationshipDSC": "Dependent", "VisitsCNT": 296}, {"ModalityDSC": "Nurse Visit", "RelationshipDSC": "Employee", "VisitsCNT": 674}, {"ModalityDSC": "Optometry", "RelationshipDSC": "Dependent", "VisitsCNT": 277}, {"ModalityDSC": "Optometry", "RelationshipDSC": "Employee", "VisitsCNT": 568}, {"ModalityDSC": "Physical Therapy", "RelationshipDSC": "Dependent", "VisitsCNT": 854}, {"ModalityDSC": "Physical Therapy", "RelationshipDSC": "Employee", "VisitsCNT": 1612}, {"ModalityDSC": "Preventive", "RelationshipDSC": "Dependent", "VisitsCNT": 407}, {"ModalityDSC": "Preventive", "RelationshipDSC": "Employee", "VisitsCNT": 871}, {"ModalityDSC": "Primary", "RelationshipDSC": "Dependent", "VisitsCNT": 806}, {"ModalityDSC": "Primary", "RelationshipDSC": "Employee", "VisitsCNT": 2105}, {"ModalityDSC": "Psychiatry", "RelationshipDSC": "Dependent", "VisitsCNT": 16}, {"ModalityDSC": "Psychiatry", "RelationshipDSC": "Employee", "VisitsCNT": 25}, {"ModalityDSC": "Screening", "RelationshipDSC": "Dependent", "VisitsCNT": 54}, {"ModalityDSC": "Screening", "RelationshipDSC": "Employee", "VisitsCNT": 110}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
